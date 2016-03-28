@@ -12,3 +12,8 @@
 2. npm install
 
 3. npm dev
+
+
+## 预览
+
+![](https://github.com/CRwming/React-WebApp/blob/master/pic1.png)
