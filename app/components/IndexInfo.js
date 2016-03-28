@@ -33,7 +33,7 @@ const IndexPage = React.createClass({
         for (var j = 0; j < recommands.length; j++) {
             videosInsert.push({
                 img: recommands[j].pic,
-                link: '#/play/' + recommands[j].aid,
+                link: '/play/' + recommands[j].aid,
                 title: recommands[j].title,
                 desc: '点击:' + recommands[j].play + '||弹幕:' + recommands[j].video_review
             });
