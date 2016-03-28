@@ -2,7 +2,7 @@
  * Created by ming on 2016/3/27.
  */
 import React from 'react';
-import AMUIReact from 'amazeui-react';
+import AMU from 'amazeui-react';
 import {Card,CardHeader,CardText}from 'material-ui'
 import Lib from '../tool/Lib'
 //import Player from '../Player'
@@ -51,7 +51,7 @@ var Pagination = React.createClass({
             e.preventDefault();
             handler(link);
         };
-        return <AMUIReact.Pagination onSelect={handleSelect} theme="default" data={data}/>;
+        return <AMU.Pagination onSelect={handleSelect} theme="default" data={data}/>;
     }
 });
 
@@ -59,16 +59,16 @@ var Pagination = React.createClass({
 var VideoInfo = React.createClass({
     render: function () {
         var data = this.props.data;
-        return <AMUIReact.Grid className='doc-g am-text-center video-info'>
-            <AMUIReact.Col md={8} mdOffset={2}>
-                <AMUIReact.Col sm={4}>
-                    <AMUIReact.Thumbnail caption={data.author} src={data.face}/>
-                </AMUIReact.Col>
-                <AMUIReact.Col sm={8}>
-                    {/*<AMUIReact.Panel header={data.title} amStyle='secondary'>
+        return <AMU.Grid className='doc-g am-text-center video-info'>
+            <AMU.Col md={8} mdOffset={2}>
+                <AMU.Col sm={4}>
+                    <AMU.Thumbnail caption={data.author} src={data.face}/>
+                </AMU.Col>
+                <AMU.Col sm={8}>
+                    {/*<AMU.Panel header={data.title} amStyle='secondary'>
                         <p>播放:{data.play} || 弹幕:{data.video_review} ||时间:{data.created_at}</p>
                         <blockquote>{data.description}</blockquote>
-                    </AMUIReact.Panel>*/}
+                    </AMU.Panel>*/}
                     <Card>
                         <CardHeader  title={data.title}/>
                         <CardText>
@@ -77,9 +77,9 @@ var VideoInfo = React.createClass({
                             {data.description}
                         </CardText>
                     </Card>
-                </AMUIReact.Col>
-            </AMUIReact.Col>
-        </AMUIReact.Grid>
+                </AMU.Col>
+            </AMU.Col>
+        </AMU.Grid>
     }
 });
 
@@ -191,7 +191,7 @@ var VideoPart = React.createClass({
         }
         return (this.state.load) ?
             <div style={styles.top1}><Pagination parts={this.state.partList} now={this.state.cid} handler={this.partSelect}/>
-                <AMUIReact.Menu cols={2} data={data} theme='dropdown2' onSelect={this.handleClick}/>
+                <AMU.Menu cols={2} data={data} theme='dropdown2' onSelect={this.handleClick}/>
                 {this.state.playerLoad ?
                     <Player src={ this.state.videoUrl }
                             width={ this.state.width }
@@ -208,10 +208,10 @@ var VideoPart = React.createClass({
 
 export default React.createClass({
     render: function () {
-        return <AMUIReact.Grid>
-            <AMUIReact.Col md={8} mdOffset={2} id='video-container'>
+        return <AMU.Grid>
+            <AMU.Col md={8} mdOffset={2} id='video-container'>
                 <VideoPart aid={ this.props.params.aid }/>
-            </AMUIReact.Col>
-        </AMUIReact.Grid>;
+            </AMU.Col>
+        </AMU.Grid>;
     }
 });
