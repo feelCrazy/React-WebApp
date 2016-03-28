@@ -17,3 +17,4 @@
 ## 预览
 
 ![](https://github.com/CRwming/React-WebApp/blob/master/pic1.png)
+![](https://github.com/CRwming/React-WebApp/blob/master/pic2.png)
