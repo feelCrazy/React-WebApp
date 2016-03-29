@@ -11,7 +11,7 @@
 
 2. npm install
 
-3. npm dev
+3. npm run dev
 
 
 ## 预览
